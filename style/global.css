@@ -27,6 +27,15 @@ html {
     font-size: 6.25%;
 }
 
+body {
+    display: grid;
+    /* grid-template-rows: 180px 1fr 50px;
+    grid-template-areas: 'header main footer'; */
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--pink);
+}
+
 h1 {
     font-family: var(--mainFont);
     font-size: clamp(36px, 7vw, 56rem);
@@ -41,8 +50,9 @@ h2 {
 .button {
     text-align: center;
     font-family: var(--secondaryFont);
+    font-size: clamp(24px, 4vw, 32rem);
     display: block;
-    width: 300rem;
+    width: clamp(250px, 50vw, 300rem);
     padding: 10rem 20rem;
     background-color: var(--pinkLight);
     color: var(--pink);

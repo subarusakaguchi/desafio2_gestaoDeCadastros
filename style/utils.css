@@ -66,3 +66,32 @@
     transition: 0.5s;
     cursor: pointer;
 }
+
+.buttonInverse {
+    text-align: center;
+    font-family: var(--secondaryFont);
+    font-size: clamp(24px, 4vw, 32rem);
+    display: block;
+    width: clamp(250px, 50vw, 300rem);
+    padding: 10rem 20rem;
+    background-color: var(--pink);
+    color: var(--pinkLight);
+    border: 2px solid var(--pinkLight);
+    border-radius: 10rem;
+    font-size: 20rem;
+    margin-bottom: 15rem;
+}
+
+.buttonInverse:hover {
+    background-color: var(--pinkLight);
+    color: var(--pink);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/* Back button */
+.back {
+    color: var(--white);
+    font-size: clamp(40px, 5vw, 50rem);
+    display: flex;
+}

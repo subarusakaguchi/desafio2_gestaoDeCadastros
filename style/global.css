@@ -54,6 +54,26 @@ input {
     border-radius: 8rem;
 }
 
+li {
+    list-style: none;
+    font-size: 20rem;
+    font-family: var(--mainFont);
+    font-weight: bolder;
+    color: var(--blueDark);
+    background-color: var(--pinkLight);
+    width: clamp(250px, 50vw, 300rem);
+    padding: 10px 20px;
+    border: 2px solid var(--pink);
+    border-radius: 12rem;
+    margin-bottom: 10px;
+}
+
+li:hover {
+    background-color: var(--pink);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;

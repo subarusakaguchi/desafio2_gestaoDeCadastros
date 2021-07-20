@@ -95,3 +95,8 @@
     font-size: clamp(40px, 5vw, 50rem);
     display: flex;
 }
+
+
+.res {
+    margin-left: 50px;
+}

@@ -15,6 +15,8 @@ img {
     width: auto;
 }
 
+
+/* Variáveis */
 html {
     --pink: #D1327A;
     --pinkLight: #FAD6E1;
@@ -24,13 +26,11 @@ html {
     --mainFont:'Oranienbaum', serif;
     --secondaryFont: 'Arimo', sans-serif;
 
+    /* Alteração para fazer rem = px em uma escala 1:1 */
     font-size: 6.25%;
 }
 
 body {
-    display: grid;
-    /* grid-template-rows: 180px 1fr 50px;
-    grid-template-areas: 'header main footer'; */
     width: 100%;
     margin: 0 auto;
     background-color: var(--pink);
@@ -39,7 +39,6 @@ body {
 h1 {
     font-family: var(--mainFont);
     font-size: clamp(36px, 7vw, 56rem);
-    color: var(--blueDark);
 }
 
 h2 {
@@ -47,6 +46,53 @@ h2 {
     font-size: clamp(28px, 5vw, 42rem);
 }
 
+/* Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Header */
+.header {
+    height: 150rem;
+    color: var(--pinkLight);
+    background-color: var(--blueDark);
+}
+
+/* Main */
+.menu {
+    background-color: var(--blueDark);
+    width: clamp(350px, 60vw, 400rem);
+    height: 300px;
+    padding: 50px;
+    margin: 50px 0;
+    border-radius: 12rem;
+    box-shadow: 4px 3px 3px var(--black);
+}
+
+/* Footer */
+.footer {
+    color: var(--blueDark);
+    font-family: var(--secondaryFont);
+    font-size: clamp(20px, 4vw, 24rem);
+}
+
+.footer a {
+    color: var(--pinkLight);
+}
+
+.footer a:before {
+    content: '\00A9 '
+}
+
+.footer a:hover {
+    color: var(--blueDark);
+    transition: 0.5s;
+}
+
+/* Buttons */
 .button {
     text-align: center;
     font-family: var(--secondaryFont);

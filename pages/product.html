@@ -15,12 +15,24 @@
 </head>
 <body>
     <header class="container header">
-        
+        <h1>
+            CADASTRO DE PRODUTOS
+        </h1>
     </header>
 
     <main class="container">
         <div class="menu">
-
+            <form action="">
+                <!-- Nome, cpf, email, cep, número, complemento -->
+                <input type="text" name="name" id="nameProduct" placeholder="Nome do produto">
+                <input type="number" name="weight" id="weight" placeholder="Peso (Kg)">
+                <input type="number" name="format" id="format" placeholder="Formato do pacote">
+                <input type="number" name="lengh" id="length" placeholder="Comprimento (cm)">
+                <input type="number" name="height" id="height" placeholder="Altura (cm)">
+                <input type="number" name="width" id="width" placeholder="Largura (cm)">
+                <input type="text" name="description" id="desc" placeholder="Descrição do produto">
+                <button class="button">CADASTRAR</button>
+            </form>
         </div>
     </main>
 

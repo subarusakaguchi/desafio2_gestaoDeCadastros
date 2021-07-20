@@ -46,6 +46,19 @@ h2 {
     font-size: clamp(28px, 5vw, 42rem);
 }
 
+input {
+    font-family: var(--secondaryFont);
+    width: clamp(250px, 50vw, 300rem);
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 8rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 /* Container */
 .container {
     display: flex;
@@ -65,7 +78,6 @@ h2 {
 .menu {
     background-color: var(--blueDark);
     width: clamp(350px, 60vw, 400rem);
-    height: 300px;
     padding: 50px;
     margin: 50px 0;
     border-radius: 12rem;
@@ -74,6 +86,7 @@ h2 {
 
 /* Footer */
 .footer {
+    height: 50px;
     color: var(--blueDark);
     font-family: var(--secondaryFont);
     font-size: clamp(20px, 4vw, 24rem);

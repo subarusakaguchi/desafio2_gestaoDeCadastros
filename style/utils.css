@@ -1,0 +1,68 @@
+/* Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Header */
+.header {
+    height: 150rem;
+    color: var(--pinkLight);
+    background-color: var(--blueDark);
+}
+
+/* Main */
+.menu {
+    background-color: var(--blueDark);
+    width: clamp(350px, 60vw, 400rem);
+    padding: 50px;
+    margin: 50px 0;
+    border-radius: 12rem;
+    box-shadow: 4px 3px 3px var(--black);
+}
+
+/* Footer */
+.footer {
+    height: 50px;
+    color: var(--blueDark);
+    font-family: var(--secondaryFont);
+    font-size: clamp(20px, 4vw, 24rem);
+}
+
+.footer a {
+    color: var(--pinkLight);
+}
+
+.footer a:before {
+    content: '\00A9 '
+}
+
+.footer a:hover {
+    color: var(--blueDark);
+    transition: 0.5s;
+}
+
+/* Buttons */
+.button {
+    text-align: center;
+    font-family: var(--secondaryFont);
+    font-size: clamp(24px, 4vw, 32rem);
+    display: block;
+    width: clamp(250px, 50vw, 300rem);
+    padding: 10rem 20rem;
+    background-color: var(--pinkLight);
+    color: var(--pink);
+    border: 2px solid var(--pink);
+    border-radius: 10rem;
+    font-size: 20rem;
+    margin-bottom: 15rem;
+}
+
+.button:hover {
+    background-color: var(--pink);
+    color: var(--pinkLight);
+    transition: 0.5s;
+    cursor: pointer;
+}

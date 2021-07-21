@@ -100,3 +100,31 @@
 .res {
     margin-left: 50px;
 }
+
+.active {
+    height: 300px;
+}
+
+.active:hover {
+    background-color: var(--pinkLight);
+}
+
+.showInfo {
+    text-align: left;
+    list-style: square;
+    list-style-position: inside;
+    font-size: 14rem;
+    font-family: var(--secondaryFont);
+    font-weight: 500;
+    color: var(--blueDark);
+    background-color: transparent;
+    width: clamp(180px, 40vw, 250rem);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12rem;
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}

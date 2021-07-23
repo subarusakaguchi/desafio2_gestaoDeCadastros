@@ -1,14 +1,14 @@
 var id = []
 
 onload = function () {
-    let idListString = localStorage.getItem('idList')
+    let idListClientString = localStorage.getItem('idListClient')
 
-    if (idListString === null) {
+    if (idListClientString === null) {
         id = []
     } else {
-        idListString = idListString.split(',')
-        for (let i = 0; i < idListString.length; i++) {
-            id[i] = Number(idListString[i])
+        idListClientString = idListClientString.split(',')
+        for (let i = 0; i < idListClientString.length; i++) {
+            id[i] = Number(idListClienttString[i])
         }
     }
 
@@ -62,7 +62,7 @@ function addId() {
         let val = max(id)
         id.push(val + 1)
     }
-    localStorage.setItem('idList', id.join())
+    localStorage.setItem('idListClient', id.join())
 }
 
 function max(array) {
@@ -138,9 +138,9 @@ function clearClient() {
     }
 
     if (id.length === 0) {
-        localStorage.removeItem('idList')
+        localStorage.removeItem('idListClient')
     } else {
-        localStorage.setItem('idList', id.join())
+        localStorage.setItem('idListClient', id.join())
     }
     
     eraseItens()
@@ -157,8 +157,11 @@ function clearAll() {
     let confirm = window.confirm('Você tem certeza que deseja apagar todos os clientes?')
 
     if (confirm) {
-        localStorage.clear()
+        for (let i = 0; i < id.length; i++) {
+            localStorage.removeItem(`client_${id[i]}`)
+        }
         id = []
+        localStorage.removeItem('idListClient')
         eraseItens()
     }
 }

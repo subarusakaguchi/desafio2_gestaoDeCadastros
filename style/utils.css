@@ -89,6 +89,28 @@
     cursor: pointer;
 }
 
+.buttonErase {
+    text-align: center;
+    font-family: var(--secondaryFont);
+    font-size: clamp(24px, 4vw, 32rem);
+    display: block;
+    width: clamp(150px, 35vw, 200rem);
+    padding: 5rem 10rem;
+    background-color: var(--pinkLight);
+    color: var(--pink);
+    border: 2px solid var(--pink);
+    border-radius: 10rem;
+    font-size: 20rem;
+    margin-bottom: 15rem;
+}
+
+.buttonErase:hover {
+    transition: 0.5s;
+    background-color: var(--pink);
+    color: var(--pinkLight);
+    cursor: pointer;
+}
+
 /* Back button */
 .back {
     color: var(--white);
@@ -102,7 +124,7 @@
 }
 
 .active {
-    height: 300px;
+    /* height: 300px; */
 }
 
 .active:hover {

@@ -1,6 +1,12 @@
 var id = []
+
 onload = function () {
     let idListString = localStorage.getItem('idList')
+    let resClient = document.getElementById('resClient')
+    if (resClient.childElementCount <= 0){
+        clearAll()
+    }
+
     if (idListString === null) {
         id = []
     } else {
@@ -36,6 +42,16 @@ const clientRegister = document.getElementById('btnClient').addEventListener('cl
     attClient(client)
 })
 
+function createClient(id, name, cpf, email, cep, number, complement) {
+    this.id = id,
+    this.nome = name,
+    this.cpf = cpf,
+    this.email = email,
+    this.cep = cep,
+    this.number = number,
+    this.complement = complement
+}
+
 function addId() {
     if (id.length === 0) {
         id.push(1)
@@ -58,46 +74,50 @@ function max(array) {
     return max
 }
 
-function createClient(id, name, cpf, email, cep, number, complement) {
-    this.id = id,
-    this.nome = name,
-    this.cpf = cpf,
-    this.email = email,
-    this.cep = cep,
-    this.number = number,
-    this.complement = complement
-}
-
 function attClient(client) {
     let resClientContainer = document.getElementById('resClientContainer')
     resClientContainer.classList.add('menu')
     let resClient = document.getElementById('resClient')
     let item = document.createElement('li')
     let ul = document.createElement('ul')
+    let btn = document.createElement('button')
+    btn.innerText = 'Apagar Cliente'
+    btn.classList.add('buttonErase')
+    btn.addEventListener('click', clearClient)
     item.setAttribute('id', `client_${client.id}`)
     item.innerHTML = `${client.nome}`
     ul.setAttribute('id', `infoClient_${client.id}`)
     ul.classList.add('hidden')
-    addData(ul, client)
-
-
+    Object.keys(client).forEach(function(key) {
+        let li = new createLi(`${key.toUpperCase()}: ${client[key]}`)
+        ul.appendChild(li)
+    })
+    ul.appendChild(btn)
     item.addEventListener('click', toggleClient)
     item.appendChild(ul)
     resClient.appendChild(item)
 }
 
-const addData = function (element, client) {
-    Object.keys(client).forEach(function(key) {
-        let li = new createLi(`${key.toUpperCase()}: ${client[key]}`)
-        element.appendChild(li)
-    })
-}
-
-function createLi(texto) {
+function createLi(text) {
     const li = document.createElement('li')
     li.classList.add('showInfo')
-    li.innerHTML = `${texto}`
+    li.innerHTML = `${text}`
     return li
+}
+
+function clearClient() {
+    let resClient = document.getElementById('resclient')
+    let client = this.closest("li").id
+    console.log(client)
+    let clientNumber = Number(client[(client.length - 1)])
+    localStorage.removeItem(`${client}`)
+    id = id.splice(clientNumber, 1)
+    console.log(resClient)
+    // resClient.innerHTML = ''
+    for (let i = 0; i < id.length; i++) {
+        let clientItem = JSON.parse(localStorage.getItem(`client_${id[i]}`))
+        attClient(clientItem)
+    }
 }
 
 // Função para aparecer os dados dos clientes
@@ -105,8 +125,8 @@ const toggleClient = function () {
     const id = this.id
     let div = document.getElementById(`${id}`)
     div.classList.toggle('active')
+    this.children[0].classList.toggle('hidden')
 }
-
 
 function clearAll() {
     localStorage.clear()

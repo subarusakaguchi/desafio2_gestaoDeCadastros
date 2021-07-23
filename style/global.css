@@ -46,6 +46,11 @@ h2 {
     font-size: clamp(28px, 5vw, 42rem);
 }
 
+p {
+    font-family: var(--secondaryFont);
+    font-size: clamp(16px, 4vw, 20rem);
+}
+
 input {
     font-family: var(--secondaryFont);
     width: clamp(250px, 50vw, 300rem);

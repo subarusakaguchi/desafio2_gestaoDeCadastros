@@ -1,6 +1,10 @@
 var id = []
 
 onload = function () {
+    load()
+}
+
+function load() {
     let idListString = localStorage.getItem('idList')
     let resClient = document.getElementById('resClient')
     if (resClient.childElementCount <= 0){
@@ -108,16 +112,10 @@ function createLi(text) {
 function clearClient() {
     let resClient = document.getElementById('resclient')
     let client = this.closest("li").id
-    console.log(client)
     let clientNumber = Number(client[(client.length - 1)])
     localStorage.removeItem(`${client}`)
     id = id.splice(clientNumber, 1)
-    console.log(resClient)
-    // resClient.innerHTML = ''
-    for (let i = 0; i < id.length; i++) {
-        let clientItem = JSON.parse(localStorage.getItem(`client_${id[i]}`))
-        attClient(clientItem)
-    }
+    load()
 }
 
 // Função para aparecer os dados dos clientes

@@ -23,14 +23,15 @@
 
     <main class="container">
         <div class="menu">
-            <form action="">
+            <form id='formClient' action="">
                 <!-- Nome, cpf, email, cep, número, complemento -->
-                <input type="text" name="name" id="nameClient" placeholder="Nome completo">
-                <input type="number" name="cpf" id="cpf" placeholder="CPF">
-                <input type="email" name="email" id="email" placeholder="Email">
-                <input type="number" name="cep" id="cep" placeholder="CEP">
-                <input type="number" name="numberHouse" id="numberHouse" placeholder="Número da casa ou logradouro">
+                <input type="text" name="name" id="nameClient" placeholder="Nome completo*">
+                <input type="number" name="cpf" id="cpf" placeholder="CPF*">
+                <input type="email" name="email" id="email" placeholder="Email*">
+                <input type="number" name="cep" id="cep" placeholder="CEP*">
+                <input type="number" name="numberHouse" id="numberHouse" placeholder="Número da casa ou logradouro*">
                 <input type="text" name="complement" id="complement" placeholder="Complemento">
+                <p>OBS: Todos os dados com * são obrigatórios!</p>
                 <button id="btnClient"class="buttonInverse">CADASTRAR</button>
             </form>
 
@@ -39,16 +40,19 @@
             <a class="button" href="./inventory.html">Inventário</a>
         </div>
 
-        <div class="res" id="resClientContainer">
+        <div class="res menu" id="resClientContainer">
+            <h2>Clientes</h2>
             <ul id="resClient">
 
             </ul>
+            <button class="buttonInverse" onclick="clearAll()">Apagar Todos</button>
         </div>
     </main>
 
     <footer class="container footer">
         Powered by <a href="https://www.linkedin.com/in/subarusakaguchi/" target="blank">Subaru Sakaguchi</a>
     </footer>
-    <script src="../script/script.js"></script>
+    <!-- <script src="../script/script.js"></script> -->
+    <script src="../script/script2.js"></script>
 </body>
 </html>

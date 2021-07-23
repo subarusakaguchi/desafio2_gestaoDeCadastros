@@ -41,7 +41,6 @@ const clientRegister = document.getElementById('btnClient').addEventListener('cl
     let client = new createClient(id[(id.length-1)], nameClient, cpf, email, cep, numberHouse, complement)
 
     localStorage.setItem(`client_${id[(id.length - 1)]}`, JSON.stringify(client))
-    console.log(client)
 
     attClient(client)
 })

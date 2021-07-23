@@ -8,7 +8,7 @@ onload = function () {
     } else {
         idListClientString = idListClientString.split(',')
         for (let i = 0; i < idListClientString.length; i++) {
-            id[i] = Number(idListClienttString[i])
+            id[i] = Number(idListClientString[i])
         }
     }
 
@@ -145,7 +145,6 @@ function clearClient() {
     
     eraseItens()
     attClient()
-    console.log(id)
 }
 
 function eraseItens() {

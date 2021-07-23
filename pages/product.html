@@ -23,22 +23,31 @@
 
     <main class="container">
         <div class="menu">
-            <form action="">
+            <form id="formProduct" action="">
                 <!-- Nome, cpf, email, cep, número, complemento -->
-                <input type="text" name="name" id="nameProduct" placeholder="Nome do produto">
-                <input type="number" name="weight" id="weight" placeholder="Peso (Kg)">
-                <input type="number" name="format" id="format" placeholder="Formato do pacote">
-                <input type="number" name="lengh" id="length" placeholder="Comprimento (cm)">
-                <input type="number" name="height" id="height" placeholder="Altura (cm)">
-                <input type="number" name="width" id="width" placeholder="Largura (cm)">
-                <input type="number" name="diameter" id="diameter" placeholder="Diâmetro (cm)">
+                <input type="text" name="name" id="nameProduct" placeholder="Nome do produto*">
+                <input type="number" name="weight" id="weight" placeholder="Peso (Kg)*">
+                <input type="number" name="format" id="format" placeholder="Formato do pacote*">
+                <input type="number" name="lengh" id="length" placeholder="Comprimento (cm)*">
+                <input type="number" name="height" id="height" placeholder="Altura (cm)*">
+                <input type="number" name="width" id="width" placeholder="Largura (cm)*">
+                <input type="number" name="diameter" id="diameter" placeholder="Diâmetro (cm)*">
                 <input type="text" name="description" id="desc" placeholder="Descrição do produto">
-                <button onclick="" class="buttonInverse">CADASTRAR</button>
+                <p>OBS: Todos os dados com * são obrigatórios!</p>
+                <button id="btnProduct" class="buttonInverse">CADASTRAR</button>
             </form>
 
             <a class="button" href="../index.html">Voltar</a>
             <a class="button" href="./client.html">Cadastrar Cliente</a>
             <a class="button" href="./inventory.html">Inventário</a>
+        </div>
+
+        <div class="res menu" id="resProductContainer">
+            <h2>Produtos</h2>
+            <ul id="resProduct">
+
+            </ul>
+            <button class="buttonInverse" onclick="clearAll()">Apagar Todos</button>
         </div>
     </main>
 

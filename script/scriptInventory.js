@@ -95,7 +95,7 @@ function attBuy() {
         let txtarea = document.createElement('textarea')
 
         txtarea.setAttribute('id', `txtarea_${idBuy[i]}`)
-        txtarea.classList.add('hidden')
+        txtarea.classList.add('sr-only')
         txtarea.innerText = '{\n'
         Object.keys(ship).forEach(function(key) {
             txtarea.innerText += `${key}: "${ship[key]}"`
@@ -121,10 +121,9 @@ function attBuy() {
             ul.appendChild(newLi)
         })
 
-        
+        ul.appendChild(txtarea)
         ul.appendChild(btnShippinng)
         ul.appendChild(btnErase)
-        ul.appendChild(txtarea)
         li.appendChild(ul)
         li.addEventListener('click', toggleProduct)
         resBuy.appendChild(li)
@@ -154,6 +153,7 @@ function copyData() {
     let itemBuy = this.closest('li').id
     let itemBuyNumber = Number(itemBuy[(itemBuy.length - 1)])
     let txtarea = document.getElementById(`txtarea_${itemBuyNumber}`)
+    console.log(txtarea)
 
     txtarea.select()
     txtarea.setSelectionRange(0, 99999)

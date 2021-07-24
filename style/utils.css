@@ -137,10 +137,6 @@ main .menu p {
     margin-bottom: 15px;
 }
 
-.active {
-    /* height: 300px; */
-}
-
 .active:hover {
     background-color: var(--pinkLight);
 }

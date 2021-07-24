@@ -164,3 +164,18 @@ main .menu p {
 .hidden {
     display: none;
 }
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        display: block;
+    }
+
+    .res {
+        margin-left: 0;
+        margin: 20px auto;
+    }
+
+    .menu {
+        margin: 20px auto;
+    }
+}

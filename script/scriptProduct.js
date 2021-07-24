@@ -156,7 +156,7 @@ function eraseItens() {
     resProduct.innerHTML = ''
 }
 
-function clearAll() {
+function clearAllProduct() {
     let confirm = window.confirm('Você tem certeza que deseja apagar todos os Produtos?')
 
     if (confirm) {

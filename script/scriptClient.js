@@ -152,7 +152,7 @@ function eraseItens() {
     resClient.innerHTML = ''
 }
 
-function clearAll() {
+function clearAllClient() {
     let confirm = window.confirm('Você tem certeza que deseja apagar todos os clientes?')
 
     if (confirm) {

@@ -17,18 +17,36 @@
 <body>
     <header class="container header">
         <h1>
-            INVENTÁRIO
+            INVENTÁRIO DE COMPRAS
         </h1>
     </header>
 
     <main class="container">
         <div class="menu">
+            <form id="formInventory" action="">
+                <input type="number" name="idClient" id="idClient" placeholder="Id do cliente">
+                <input type="number" name="idProduct" id="idProduct" placeholder="Id do produto">
+                <input type="number" name="service" id="service" placeholder="Número do serviço dos correios">
+                <button id="btnBuy" class="buttonInverse">Cadastrar Compra</button>
+            </form>
 
+            <a class="button" href="../index.html">Voltar</a>
+            <a class="button" href="./client.html">Cadastrar Cliente</a>
+            <a class="button" href="./product.html">Cadastrar Produto</a>
+        </div>
+
+        <div class="res menu" id="resBuyContainer">
+            <h2>Compras</h2>
+            <ul id="resBuy">
+
+            </ul>
+            <button class="buttonInverse" onclick="clearAllBuy()">Apagar Todos</button>
         </div>
     </main>
 
     <footer class="container footer">
         Powered by <a href="https://www.linkedin.com/in/subarusakaguchi/" target="blank">Subaru Sakaguchi</a>
     </footer>
+    <script src="../script/scriptInventory.js"></script>
 </body>
 </html>

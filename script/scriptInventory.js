@@ -43,7 +43,7 @@ document.getElementById('btnBuy').addEventListener('click', function addBuy(e) {
 })
 
 function createShipping(client, product, service) {
-    this.sCepOrigem = cepLocal[0],
+    this.sCepOrigem = cepLocal,
     this.sCepDestino = `${client.cep}`,
     this.nVlPeso = `${product.peso}`,
     this.nCdFormato = `${product.formato}`,
@@ -99,6 +99,7 @@ function attBuy() {
         txtarea.innerText = '{\n'
         Object.keys(ship).forEach(function(key) {
             txtarea.innerText += `${key}: "${ship[key]}"`
+            txtarea.innerText += key == 'nVlDiametro' ? '' : ','
         })
         txtarea.innerText += '}'
 
